@@ -8,10 +8,10 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — Lumière Jewels" },
-      { name: "description", content: "Get in touch with Lumière Jewels. Visit our showroom in Jaipur or reach out for custom designs and enquiries." },
-      { property: "og:title", content: "Contact — Lumière Jewels" },
-      { property: "og:description", content: "Get in touch with Lumière Jewels for custom designs and enquiries." },
+      { title: "Contact Us — Pauvn Abarana Maligai" },
+      { name: "description", content: "Visit us at 47, North Masi Street, Madurai. Call +91 98765 43210 for 916 Hallmark Gold Jewellery enquiries." },
+      { property: "og:title", content: "Contact Us — Pauvn Abarana Maligai" },
+      { property: "og:description", content: "47, North Masi Street, Madurai. Pure 916 Hallmark Gold since 1987." },
     ],
   }),
 });
@@ -22,7 +22,7 @@ function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    showToast("We'll respond within 24 hours ✦");
+    showToast("நன்றி! We'll get back to you within 4 hours. 🙏");
     setForm({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
@@ -30,9 +30,12 @@ function ContactPage() {
     <div className="pt-20 min-h-screen">
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <h1 className="font-heading text-5xl font-light text-gold">Get in Touch</h1>
+          <div className="text-center mb-16 mt-8">
+            <h1 className="font-heading text-5xl font-light text-gold">Visit Us or Reach Out</h1>
             <div className="gold-divider mt-4" />
+            <p className="text-ivory-muted text-sm font-body mx-auto max-w-lg mt-6 leading-relaxed">
+              We're here Monday to Saturday, 9:30 AM to 8:30 PM. Walk in or WhatsApp us — we love meeting our customers.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -44,9 +47,9 @@ function ContactPage() {
               className="space-y-5"
             >
               {[
-                { key: "name", label: "Full Name", placeholder: "Priya Sharma", type: "text" },
-                { key: "email", label: "Email", placeholder: "priya@email.com", type: "email" },
-                { key: "phone", label: "Phone", placeholder: "+91 98290 12345", type: "tel" },
+                { key: "name", label: "Full Name", placeholder: "Your name", type: "text" },
+                { key: "email", label: "Email or WhatsApp", placeholder: "Email or WhatsApp number", type: "text" },
+                { key: "phone", label: "Phone", placeholder: "+91 98765 43210", type: "tel" },
               ].map(f => (
                 <div key={f.key}>
                   <label className="text-ivory-muted text-xs font-body mb-1 block">{f.label}</label>
@@ -70,10 +73,11 @@ function ContactPage() {
                   className="w-full bg-elevated border border-border rounded-lg px-4 py-2.5 text-sm text-ivory font-body focus:outline-none focus:border-gold appearance-none cursor-pointer"
                 >
                   <option value="">Select subject</option>
-                  <option value="order">Order Query</option>
-                  <option value="custom">Custom Design</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="other">Other</option>
+                  <option value="order">Order Enquiry</option>
+                  <option value="bridal">Bridal / Custom Order</option>
+                  <option value="exchange">Old Gold Exchange</option>
+                  <option value="complaint">Product Complaint</option>
+                  <option value="general">General Question</option>
                 </select>
               </div>
 
@@ -82,7 +86,7 @@ function ContactPage() {
                 <textarea
                   value={form.message}
                   onChange={e => setForm(prev => ({ ...prev, message: e.target.value }))}
-                  placeholder="Tell us how we can help..."
+                  placeholder="How can we help you today?"
                   rows={5}
                   required
                   className="w-full bg-elevated border border-border rounded-lg px-4 py-2.5 text-sm text-ivory placeholder:text-muted-foreground font-body focus:outline-none focus:border-gold resize-none"
@@ -98,13 +102,13 @@ function ContactPage() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              className="space-y-8"
+              className="space-y-8 mt-4"
             >
               {[
-                { icon: MapPin, title: "Visit Our Showroom", lines: ["42, Johari Bazaar", "Jaipur, Rajasthan 302003", "India"] },
-                { icon: Mail, title: "Email Us", lines: ["hello@lumierejewels.com", "orders@lumierejewels.com"] },
-                { icon: Phone, title: "Call Us", lines: ["+91 98290 12345", "+91 141 234 5678"] },
-                { icon: Clock, title: "Business Hours", lines: ["Mon — Sat: 10 AM — 8 PM", "Sunday: 11 AM — 6 PM"] },
+                { icon: MapPin, title: "Address", lines: ["47, North Masi Street,", "Near Meenakshi Amman Temple East Gate,", "Madurai — 625001, Tamil Nadu, India"] },
+                { icon: Mail, title: "Email Us", lines: ["contact@pauvnabarana.com"] },
+                { icon: Phone, title: "Phone & WhatsApp", lines: ["+91 98765 43210"] },
+                { icon: Clock, title: "Business Hours", lines: ["Mon — Sat: 9:30 AM — 8:30 PM", "Sunday: 10:00 AM — 6:00 PM", "Public Holidays: Open (Festival days — extended hours)"] },
               ].map((info, i) => (
                 <div key={i} className="flex gap-4">
                   <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
@@ -120,7 +124,7 @@ function ContactPage() {
               ))}
 
               <a
-                href="https://wa.me/919829012345"
+                href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold rounded-lg text-sm inline-flex items-center gap-2"

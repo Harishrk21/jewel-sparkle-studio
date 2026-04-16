@@ -14,15 +14,24 @@ export const Route = createFileRoute("/collections")({
   }),
   head: () => ({
     meta: [
-      { title: "Collections — Lumière Jewels" },
-      { name: "description", content: "Explore our curated collections of luxury handcrafted jewellery. Rings, necklaces, earrings, bracelets, anklets and bridal sets." },
-      { property: "og:title", content: "Collections — Lumière Jewels" },
-      { property: "og:description", content: "Explore our curated collections of luxury handcrafted jewellery." },
+      { title: "Collections — Pauvn Abarana Maligai" },
+      { name: "description", content: "Browse our 916 BIS Hallmark certified gold jewellery collections. Thali, bangles, necklaces, earrings, rings and bridal sets from Madurai." },
+      { property: "og:title", content: "Collections — Pauvn Abarana Maligai" },
+      { property: "og:description", content: "916 Hallmark Gold Jewellery Collections from Madurai's Trusted Jeweller." },
     ],
   }),
 });
 
-const categoryOptions = ["all", "rings", "necklaces", "earrings", "bracelets", "anklets", "sets"];
+const categoryOptions = ["all", "thali", "bangles", "necklaces", "earrings", "rings", "bridal"];
+const categoryLabels: Record<string, string> = {
+  all: "All Collections",
+  thali: "Thali & Mangalsutra",
+  bangles: "Bangles & Kadas",
+  necklaces: "Necklaces & Harams",
+  earrings: "Earrings & Jimikki",
+  rings: "Rings & Mookuthi",
+  bridal: "Bridal Sets"
+};
 
 function CollectionsPage() {
   const { category: initialCategory } = Route.useSearch();
@@ -50,11 +59,12 @@ function CollectionsPage() {
       {/* Hero Banner */}
       <div className="bg-surface section-padding text-center">
         <h1 className="font-heading text-5xl md:text-6xl font-light text-ivory">Our Collections</h1>
+        <p className="text-gold/80 text-sm font-body mt-2 italic">"தங்கத்தின் தரம், மரபின் மகிமை"</p>
         <div className="gold-divider mt-4" />
         <p className="text-ivory-muted text-sm font-body mt-4">
           <Link to="/" className="hover:text-gold transition-colors">Home</Link>
           <span className="mx-2">›</span>
-          Collections
+          {categoryLabels[activeCategory]}
         </p>
       </div>
 
@@ -66,13 +76,13 @@ function CollectionsPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-xs uppercase tracking-widest font-body transition-all ${
+                className={`px-4 py-1.5 rounded-full text-xs font-body transition-all ${
                   activeCategory === cat
                     ? "bg-gold text-background"
                     : "border border-border text-ivory-muted hover:border-gold hover:text-gold"
                 }`}
               >
-                {cat === "all" ? "All" : cat}
+                {categoryLabels[cat]}
               </button>
             ))}
           </div>

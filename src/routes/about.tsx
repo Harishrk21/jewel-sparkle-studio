@@ -6,29 +6,52 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Lumière Jewels" },
-      { name: "description", content: "Born in the lanes of Jaipur, crafted for the world. Discover the heritage and artistry behind Lumière Jewels." },
-      { property: "og:title", content: "About — Lumière Jewels" },
-      { property: "og:description", content: "Born in the lanes of Jaipur, crafted for the world." },
+      { title: "About Us — Pauvn Abarana Maligai" },
+      { name: "description", content: "Three generations of trusted gold craftsmanship in Madurai since 1987. Pure 916 BIS Hallmark Gold Jewellery." },
+      { property: "og:title", content: "About Us — Pauvn Abarana Maligai" },
+      { property: "og:description", content: "Madurai's Trusted Jeweller Since 1987. Three Generations. One Promise. Pure Gold." },
     ],
   }),
 });
 
 const timeline = [
-  { year: "2008", title: "Founded", desc: "Started in a small workshop in Jaipur's Johari Bazaar with three master artisans." },
-  { year: "2012", title: "First Flagship Store", desc: "Opened our first retail space, bringing Rajasthani craftsmanship to discerning customers." },
-  { year: "2016", title: "National Award", desc: "Received the National Award for Excellence in Jewellery Design from the Gem & Jewellery Council." },
-  { year: "2020", title: "Online Launch", desc: "Launched our e-commerce platform, making luxury accessible across India." },
-  { year: "2024", title: "10,000+ Customers", desc: "Crossed the milestone of 10,000 happy customers across 28 states." },
+  { year: "1987", title: "Founded", desc: "Founded by Shri. Pauvu Mudaliar on North Masi Street, Madurai" },
+  { year: "1995", title: "Expansion", desc: "Expanded to full showroom with 200+ designs" },
+  { year: "2003", title: "BIS Certification", desc: "Received BIS 916 Hallmark Certification (first on Masi Street)" },
+  { year: "2010", title: "Second Generation", desc: "Second generation takes over; custom bridal orders launched" },
+  { year: "2016", title: "Award Winner", desc: "Winner: 'Most Trusted Jeweller — Madurai District' Award" },
+  { year: "2020", title: "Digital Launch", desc: "Online catalogue launched; WhatsApp order service started" },
+  { year: "2024", title: "37 Years", desc: "37 Years of service | 35,000+ families served" },
 ];
 
 const values = [
-  { icon: Gem, title: "Handcrafted", desc: "Each piece passes through 12 artisan hands" },
-  { icon: Shield, title: "Ethical Sourcing", desc: "Conflict-free gems, recycled precious metals" },
-  { icon: Award, title: "Certified Purity", desc: "BIS Hallmark on every gold piece" },
-  { icon: Heart, title: "Lifetime Polish", desc: "Free cleaning & polishing, forever" },
-  { icon: Package, title: "Secure Packaging", desc: "Tamper-proof luxury boxes with insurance" },
-  { icon: RotateCcw, title: "Easy Returns", desc: "7-day hassle-free return policy" },
+  { icon: Award, title: "916 BIS Hallmark", desc: "Every piece certified. No compromise, ever." },
+  { icon: Gem, title: "Transparent Billing", desc: "Weight, making charge, wastage — all shown clearly." },
+  { icon: RotateCcw, title: "Old Gold Exchange", desc: "Exchange your old gold at live market rate. No deductions." },
+  { icon: Shield, title: "Handcrafted Designs", desc: "Over 60% of our designs are handmade by in-house karigars." },
+  { icon: Package, title: "Gift Packaging", desc: "Complimentary premium box and card for all purchases." },
+  { icon: Heart, title: "Lifetime Cleaning", desc: "Free cleaning and polishing for all purchases. Forever." },
+];
+
+const artisans = [
+  {
+    name: "Muthu Karigar",
+    specialty: "Temple Jewellery & Repoussé Work",
+    experience: "34 Years",
+    quote: "I learned this craft from my father. Every Meenakshi I engrave — I feel her blessings in my hands."
+  },
+  {
+    name: "Selvi Akka",
+    specialty: "Stone Setting & Kemp Work",
+    experience: "22 Years",
+    quote: "Setting each stone is like placing a star in the sky. It must sit perfectly — or not at all."
+  },
+  {
+    name: "Rajan Goldsmith",
+    specialty: "Thali & Bridal Chain Work",
+    experience: "28 Years",
+    quote: "A thali is the most sacred thing I make. I start every thali with a prayer."
+  }
 ];
 
 function AboutPage() {
@@ -39,20 +62,27 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="aspect-[4/5] rounded-xl overflow-hidden card-luxury">
             <img
-              src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800"
-              alt="Lumière artisan workshop"
+              src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800"
+              alt="Traditional South Indian Jewelry"
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h1 className="font-heading text-4xl md:text-5xl font-light text-gold mb-4">Our Heritage</h1>
+            <h1 className="font-heading text-4xl md:text-5xl font-light text-gold mb-4">Three Generations. One Street. Pure Gold.</h1>
             <div className="gold-divider !mx-0" />
             <p className="text-ivory-muted font-body leading-relaxed mt-6">
-              Born in the lanes of Jaipur, crafted for the world. Lumière Jewels was founded on the belief that jewellery should be more than adornment — it should be art you wear, stories you tell, and legacies you pass on.
+              It began in 1987 when our founder, Shri. Pauvu Mudaliar, opened a small jewellery shop at 47, North Masi Street — the beating heart of Madurai's jewellery district. With a single glass case, a set of hand tools, and an unshakeable commitment to 916 purity, he built the foundation of what would become Madurai's most trusted gold maligai.
             </p>
             <p className="text-ivory-muted font-body leading-relaxed mt-4">
-              Our master artisans carry centuries of Rajasthani goldsmithing tradition in their hands. Every piece is handcrafted using techniques passed down through generations, yet designed for the modern woman who values both heritage and contemporary elegance.
+              Today, three generations later, Pauvu Abarana Maligai serves over 35,000 families across Madurai, Dindigul, Virudhunagar, and Theni. Every piece we craft carries the same promise — pure 916 BIS Hallmark gold, transparent pricing, and craftsmanship that honours Tamil tradition.
             </p>
+            <p className="text-ivory-muted font-body leading-relaxed mt-4">
+              We are not just a jewellery shop. We are part of your family's story — present at your weddings, your children's naming ceremonies, your Pongal mornings, and your Karthigai evenings. That trust is our greatest hallmark.
+            </p>
+            <blockquote className="mt-6 pl-4 border-l-2 border-gold text-gold font-heading italic text-lg">
+              "தங்கம் வெறும் உலோகம் அல்ல — அது உங்கள் குடும்பத்தின் கதை."
+            </blockquote>
+            <p className="text-ivory-muted text-sm font-body mt-1 italic">("Gold is not merely a metal — it is your family's story.")</p>
           </div>
         </div>
       </section>
@@ -86,42 +116,10 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Artisans */}
+      {/* Values */}
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="font-heading text-4xl font-light text-gold text-center mb-4">Master Artisans</h2>
-          <div className="gold-divider mb-12" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: "Ratan Lal Soni", specialty: "Kundan Setting", years: 35, desc: "Third-generation Kundan artist from Bikaner." },
-              { name: "Mohd. Farooq", specialty: "Meenakari Enamel", years: 28, desc: "Master of the ancient art of enamel work on gold." },
-              { name: "Geeta Devi", specialty: "Filigree & Wire Work", years: 22, desc: "Creates impossibly delicate patterns from gold wire." },
-            ].map((artisan, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="card-luxury rounded-xl p-6 text-center"
-              >
-                <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                  <Gem className="text-gold" size={28} />
-                </div>
-                <h3 className="font-heading text-xl text-ivory">{artisan.name}</h3>
-                <p className="text-gold text-sm font-body mt-1">{artisan.specialty}</p>
-                <p className="text-ivory-muted text-xs font-body mt-1">{artisan.years} years of experience</p>
-                <p className="text-ivory-muted text-sm font-body mt-3">{artisan.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="section-padding bg-surface">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="font-heading text-4xl font-light text-gold text-center mb-4">Our Promise</h2>
+          <h2 className="font-heading text-4xl font-light text-gold text-center mb-4">The 916 Promise</h2>
           <div className="gold-divider mb-12" />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {values.map((val, i) => (
@@ -136,6 +134,36 @@ function AboutPage() {
                 <val.icon className="text-gold mx-auto mb-3" size={28} />
                 <h4 className="text-ivory font-body font-medium text-sm">{val.title}</h4>
                 <p className="text-ivory-muted text-xs font-body mt-2">{val.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Artisans */}
+      <section className="section-padding bg-surface">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="font-heading text-4xl font-light text-gold text-center mb-4">Our Master Karigars</h2>
+          <div className="gold-divider mb-12" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {artisans.map((artisan, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="card-luxury rounded-xl p-8 text-center"
+              >
+                <div className="w-20 h-20 bg-gold/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-gold text-2xl font-heading">{artisan.name.charAt(0)}</span>
+                </div>
+                <h4 className="text-ivory font-heading text-xl">{artisan.name}</h4>
+                <p className="text-gold text-sm font-body mt-1">{artisan.specialty}</p>
+                <p className="text-ivory-muted text-xs font-body mt-1">{artisan.experience} Experience</p>
+                <blockquote className="mt-4 text-ivory-muted text-sm font-body italic leading-relaxed">
+                  "{artisan.quote}"
+                </blockquote>
               </motion.div>
             ))}
           </div>

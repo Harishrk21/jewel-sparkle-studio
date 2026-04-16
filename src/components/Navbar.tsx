@@ -23,7 +23,7 @@ export default function Navbar() {
 
   const navLinks = [
     { to: "/" as const, label: "Home" },
-    { to: "/collections" as const, label: "Collections" },
+    { to: "/collections" as const, label: "Collections", search: { category: "all" } },
     { to: "/about" as const, label: "About" },
     { to: "/contact" as const, label: "Contact" },
   ];
@@ -37,8 +37,8 @@ export default function Navbar() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${bg}`}>
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="text-gold text-lg tracking-[0.35em] font-heading font-light">
-            L U M I È R E
+          <Link to="/" className="flex items-center">
+            <img src="/logo.png" alt="Pauvn Abarana Maligai" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -47,6 +47,7 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
+                search={(link as any).search}
                 className="text-ivory-muted text-sm tracking-widest uppercase font-body hover:text-gold transition-colors relative group"
                 activeProps={{ className: "text-gold" }}
               >
@@ -115,6 +116,7 @@ export default function Navbar() {
                 >
                   <Link
                     to={link.to}
+                    search={(link as any).search}
                     className="text-ivory text-2xl tracking-widest uppercase font-heading hover:text-gold transition-colors"
                     activeProps={{ className: "text-gold" }}
                   >

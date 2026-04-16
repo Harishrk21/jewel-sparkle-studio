@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState, useCallback } from "react";
-import { ChevronDown, Star, ArrowRight, Send } from "lucide-react";
+import { useRef, useEffect, useState } from "react";
+import { ChevronDown, Star, ArrowRight, Send, Gem } from "lucide-react";
 import { products } from "@/data/products";
 import { categories } from "@/data/categories";
 import { testimonials } from "@/data/testimonials";
@@ -10,8 +10,6 @@ import ProductCard from "@/components/ProductCard";
 export const Route = createFileRoute("/")({
   component: HomePage,
 });
-
-function formatPrice(p: number) { return "₹" + p.toLocaleString("en-IN"); }
 
 /* ── Gold Particles Canvas ── */
 function GoldParticles() {
@@ -118,7 +116,7 @@ function HomePage() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const featuredProducts = products.filter(p => p.isBestseller).slice(0, 8);
-  const heroWords = ["Wear", "What", "The Stars", "Are Made Of"];
+  const heroWords = ["Worn by", "Tradition.", "Blessed by", "Madurai."];
 
   return (
     <div className="overflow-hidden">
@@ -130,6 +128,14 @@ function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20">
           {/* Left: Text */}
           <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-2 mb-6"
+            >
+              <span className="text-gold text-xs font-body">🏅 BIS 916 Certified | Since 1987 | Madurai's Own</span>
+            </motion.div>
             <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-light italic text-ivory leading-[1.1]">
               {heroWords.map((word, i) => (
                 <motion.span
@@ -149,7 +155,8 @@ function HomePage() {
               transition={{ delay: 1.2 }}
               className="text-ivory-muted mt-6 text-base font-body max-w-md leading-relaxed"
             >
-              Handcrafted luxury jewellery born in the lanes of Jaipur. Every piece is a love letter in gold.
+              Pure 916 Hallmark Gold Jewellery crafted for every celebration — from Pongal to Pandaga.
+              <span className="block mt-2 text-gold font-heading italic">"தங்கத்தின் தரம், மரபின் மகிமை"</span>
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -157,12 +164,12 @@ function HomePage() {
               transition={{ delay: 1.5 }}
               className="flex gap-4 mt-8"
             >
-              <Link to="/collections" className="btn-gold rounded-lg text-sm">Explore Collection</Link>
-              <Link to="/about" className="btn-ghost-gold rounded-lg text-sm">Our Story</Link>
+              <Link to="/collections" search={{ category: "all" }} className="btn-gold rounded-lg text-sm">Explore Collections</Link>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-ghost-gold rounded-lg text-sm">Book a Visit</a>
             </motion.div>
           </div>
 
-          {/* Right: Featured Ring with rotating border */}
+          {/* Right: Featured Hero Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -174,8 +181,8 @@ function HomePage() {
               <div className="absolute inset-3 rounded-full border border-gold/20" style={{ animation: "gold-border-rotate 15s linear infinite reverse" }} />
               <div className="absolute inset-6 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600"
-                  alt="Featured jewellery"
+                  src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600"
+                  alt="Traditional Tamil Nadu Gold Jewelry"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -195,12 +202,12 @@ function HomePage() {
 
       {/* Stats */}
       <Section className="bg-surface">
-        <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-6 mb-6">
           {[
-            { end: 15000, suffix: "+", label: "Happy Customers" },
-            { end: 500, suffix: "+", label: "Unique Designs" },
-            { end: 18, suffix: "K", label: "Certified Gold" },
-            { end: 2008, suffix: "", label: "Established" },
+            { end: 35000, suffix: "+", label: "Happy Families Served" },
+            { end: 1200, suffix: "+", label: "Unique Gold Designs" },
+            { end: 916, suffix: "", label: "Hallmark Purity Guaranteed" },
+            { end: 37, suffix: " Years", label: "Of Trusted Craftsmanship" },
           ].map((stat, i) => (
             <div key={i}>
               <p className="font-heading text-3xl md:text-4xl font-light text-gold">
@@ -215,25 +222,22 @@ function HomePage() {
       {/* Categories */}
       <Section>
         <div className="mx-auto max-w-7xl px-6">
-          <SectionTitle title="Shop by Category" />
-          <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
+          <SectionTitle title="Shop by Collection" subtitle="Traditional South Indian jewellery categories" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map(cat => (
               <Link
                 key={cat.id}
                 to="/collections"
-                search={{ category: cat.id }}
-                className="flex-shrink-0 w-48 group"
+                search={{ category: cat.id as any }}
+                className="group"
               >
-                <div className="relative aspect-[3/4] rounded-xl overflow-hidden card-luxury">
+                <div className="relative aspect-[4/5] rounded-xl overflow-hidden card-luxury">
                   <img src={cat.image} alt={cat.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                   <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/10 transition-colors duration-300" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="font-heading text-xl text-ivory">{cat.name}</h3>
-                    <p className="text-ivory-muted text-xs font-body mt-1">{cat.count} pieces</p>
-                    <span className="text-gold text-xs font-body mt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      Shop Now <ArrowRight size={12} />
-                    </span>
+                    <h3 className="font-heading text-lg text-ivory leading-tight">{cat.name}</h3>
+                    <p className="text-gold/80 text-xs font-body mt-1">{cat.subtitle}</p>
                   </div>
                 </div>
               </Link>
@@ -245,14 +249,14 @@ function HomePage() {
       {/* Featured Products */}
       <Section className="bg-surface">
         <div className="mx-auto max-w-7xl px-6">
-          <SectionTitle title="Curated for You" subtitle="Our most beloved pieces, chosen by you" />
+          <SectionTitle title="Customer Favourites" subtitle="Bestselling 916 Hallmark Gold from Madurai" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {featuredProducts.map((product, i) => (
               <ProductCard key={product.id} product={product} index={i} />
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link to="/collections" className="btn-ghost-gold rounded-lg text-sm inline-block">View All Collections</Link>
+            <Link to="/collections" search={{ category: "all" }} className="btn-ghost-gold rounded-lg text-sm inline-block">View All Collections</Link>
           </div>
         </div>
       </Section>
@@ -260,17 +264,26 @@ function HomePage() {
       {/* Brand Story */}
       <Section>
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <blockquote className="font-heading text-3xl md:text-4xl font-light text-ivory italic leading-snug">
-            "Every piece tells a story<br />only you can finish."
-          </blockquote>
+          <div>
+            <blockquote className="font-heading text-3xl md:text-4xl font-light text-ivory italic leading-snug mb-6">
+              "Three Generations.<br />One Promise.<br />Pure Gold."
+            </blockquote>
+            <p className="text-ivory-muted font-body leading-relaxed">
+              What began as a small jewellery shop in the heart of Madurai's Masi Street in 1987 
+              has grown into one of the city's most beloved gold maligais. We don't just sell jewellery — 
+              we craft heirlooms that travel from mother to daughter, from wedding to naming ceremony, 
+              from generation to generation.
+            </p>
+          </div>
           <div className="space-y-6">
             {[
-              { icon: "✦", title: "Handcrafted Excellence", desc: "Each piece passes through 12 artisan hands before reaching yours" },
-              { icon: "◇", title: "Hallmark Certified", desc: "BIS Hallmark purity guarantee on every gold piece" },
-              { icon: "❋", title: "Lifetime Polish", desc: "Complimentary cleaning & polishing service, forever" },
+              { icon: "🏅", title: "916 BIS Hallmark on Every Piece", desc: "Government certified purity guarantee on all gold items." },
+              { icon: "⚖️", title: "100% Transparent Weight & Making Charges", desc: "Clear billing with exact weight, wastage and charges shown." },
+              { icon: "🔄", title: "Old Gold Exchange at Live Market Rate", desc: "Exchange your old gold at the day's market rate with no deductions." },
+              { icon: "💎", title: "Custom Bridal & Temple Jewellery Orders", desc: "Personalized designs crafted by our master karigars." },
             ].map((usp, i) => (
               <div key={i} className="flex gap-4">
-                <span className="text-gold text-2xl">{usp.icon}</span>
+                <span className="text-2xl">{usp.icon}</span>
                 <div>
                   <h4 className="text-ivory font-body font-medium">{usp.title}</h4>
                   <p className="text-ivory-muted text-sm font-body">{usp.desc}</p>
@@ -284,7 +297,7 @@ function HomePage() {
       {/* Testimonials */}
       <Section className="bg-surface">
         <div className="mx-auto max-w-7xl px-6">
-          <SectionTitle title="What They Say" />
+          <SectionTitle title="What Our Customers Say" subtitle="Trusted by 35,000+ families across Tamil Nadu" />
           <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
             {testimonials.map(t => (
               <div key={t.id} className="flex-shrink-0 w-80 card-luxury rounded-xl p-6">
@@ -296,7 +309,7 @@ function HomePage() {
                 <p className="text-ivory text-sm font-body leading-relaxed mb-4">"{t.quote}"</p>
                 <div>
                   <p className="text-ivory font-body font-medium text-sm">{t.name}</p>
-                  <p className="text-ivory-muted text-xs font-body">{t.city} • Bought: {t.productBought}</p>
+                  <p className="text-ivory-muted text-xs font-body">{t.city} • {t.productBought}</p>
                 </div>
               </div>
             ))}
@@ -307,25 +320,25 @@ function HomePage() {
       {/* Newsletter */}
       <Section>
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="font-heading text-4xl md:text-5xl font-light text-gold mb-4">Join the Inner Circle</h2>
+          <h2 className="font-heading text-4xl md:text-5xl font-light text-gold mb-4">Join Our Gold Circle</h2>
           <div className="gold-divider" />
-          <p className="text-ivory-muted text-sm mt-4 font-body mb-8">Be the first to know about new collections, exclusive offers, and artisan stories.</p>
+          <p className="text-ivory-muted text-sm mt-4 font-body mb-8">Get notified on new arrivals, festive offers, and today's live gold rate in Madurai.</p>
           {subscribed ? (
-            <p className="text-gold font-body">Welcome to the circle ✦</p>
+            <p className="text-gold font-body">You're in! We'll keep you posted. 🙏</p>
           ) : (
             <div className="flex gap-3 max-w-md mx-auto">
               <input
-                type="email"
+                type="text"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="Your email address"
+                placeholder="Enter your WhatsApp number or Email"
                 className="flex-1 bg-elevated border border-border rounded-lg px-4 py-3 text-sm text-ivory placeholder:text-muted-foreground font-body focus:outline-none focus:border-gold"
               />
               <button
                 onClick={() => { if (email) setSubscribed(true); }}
                 className="btn-gold rounded-lg text-sm flex items-center gap-2"
               >
-                <Send size={14} /> Subscribe
+                <Send size={14} /> Stay Updated
               </button>
             </div>
           )}

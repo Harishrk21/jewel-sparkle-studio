@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const messages = [
-  "Free shipping above ₹5,000",
-  "New Bridal Collection Live",
-  "Certified Hallmark Gold",
+  "🏅 916 BIS Hallmark Certified Gold — Guaranteed Purity",
+  "🚚 Free Home Delivery in Madurai above ₹10,000",
+  "✨ New Bridal Collection — Karthigai Thiruvizha Special",
+  "💍 Custom Jewellery Orders Accepted — WhatsApp Us",
+  "🎁 Exchange Your Old Gold at Best Market Rate",
 ];
 
 export default function AnnouncementBar() {

@@ -6,11 +6,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <p className="text-gold text-lg tracking-[0.3em] font-heading font-light mb-4">L U M I È R E</p>
+          <div className="md:col-span-1">
+            <img src="/logo.png" alt="Pauvn Abarana Maligai" className="h-16 w-auto mb-4" />
             <p className="text-ivory-muted text-sm leading-relaxed">
-              Born in the lanes of Jaipur, crafted for the world. Every piece tells a story only you can finish.
+              Pure 916 Gold. Madurai's Pride. Your Family's Trust. Since 1987.
             </p>
+            <p className="text-gold/80 text-xs font-body italic mt-2">"தங்கத்தின் தரம், மரபின் மகிமை"</p>
           </div>
 
           {/* Quick Links */}
@@ -28,31 +29,31 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Collections */}
+          {/* Specialities */}
           <div>
-            <h4 className="text-ivory text-sm uppercase tracking-widest mb-4 font-body font-medium">Collections</h4>
+            <h4 className="text-ivory text-sm uppercase tracking-widest mb-4 font-body font-medium">Our Specialties</h4>
             <div className="flex flex-col gap-2">
-              {["Rings", "Necklaces", "Earrings", "Bracelets", "Anklets", "Sets"].map(c => (
-                <Link key={c} to="/collections" search={{ category: c.toLowerCase() }} className="text-ivory-muted text-sm hover:text-gold transition-colors">{c}</Link>
+              {["Thali & Mangalsutra", "Bangles & Kadas", "Necklaces & Harams", "Earrings & Jimikki", "Bridal Sets", "Temple Jewellery"].map(c => (
+                <Link key={c} to="/collections" search={{ category: "all" }} className="text-ivory-muted text-sm hover:text-gold transition-colors">{c}</Link>
               ))}
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-ivory text-sm uppercase tracking-widest mb-4 font-body font-medium">Contact</h4>
+            <h4 className="text-ivory text-sm uppercase tracking-widest mb-4 font-body font-medium">Visit Us</h4>
             <div className="flex flex-col gap-2 text-ivory-muted text-sm">
-              <p>42, Johari Bazaar, Jaipur</p>
-              <p>Rajasthan, India 302003</p>
-              <p>hello@lumierejewels.com</p>
-              <p>+91 98290 12345</p>
+              <p>47, North Masi Street</p>
+              <p>Madurai — 625001, Tamil Nadu</p>
+              <p>+91 98765 43210</p>
+              <p>contact@pauvnabarana.com</p>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-ivory-muted text-xs">© 2025 Lumière Jewels. All rights reserved.</p>
+          <p className="text-ivory-muted text-xs">© {new Date().getFullYear()} Pauvu Abarana Maligai. 47, North Masi Street, Madurai — 625001, Tamil Nadu.</p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="text-ivory-muted text-xs hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-ivory-muted text-xs hover:text-gold transition-colors">Terms of Service</Link>
