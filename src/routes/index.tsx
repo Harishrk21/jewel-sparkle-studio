@@ -165,7 +165,7 @@ function HomePage() {
               className="flex gap-4 mt-8"
             >
               <Link to="/collections" search={{ category: "all" }} className="btn-gold rounded-lg text-sm">Explore Collections</Link>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn-ghost-gold rounded-lg text-sm">Book a Visit</a>
+              <a href="https://wa.me/919986688313" target="_blank" rel="noopener noreferrer" className="btn-ghost-gold rounded-lg text-sm">Book a Visit</a>
             </motion.div>
           </div>
 

@@ -15,10 +15,13 @@ For **Netlify deployment**, additional configuration with Netlify Functions is r
 
 - **Brand Name:** Pauvn Abarana Maligai
 - **Tagline:** தங்கத்தின் தரம், மரபின் மகிமை (The Purity of Gold, The Glory of Tradition)
-- **Location:** 47, North Masi Street, Madurai — 625001, Tamil Nadu, India
-- **Phone:** +91 98765 43210
-- **WhatsApp:** +91 98765 43210
-- **Email:** contact@pauvnabarana.com
+- **Business Name:** M/S PAUVN ABARNA MALIGAI
+- **Business Type:** Small Enterprise
+- **Industry:** Trading
+- **Location:** No. 50, South Avani Moola Street, Madurai, Tamil Nadu - 625001, India
+- **Phone:** +91 99866 88313
+- **WhatsApp:** +91 99866 88313
+- **Email:** kumar84prasanna@yahoo.com
 - **Business Hours:** Mon–Sat: 9:30 AM – 8:30 PM | Sunday: 10:00 AM – 6:00 PM
 - **Gold Purity:** 916 BIS Hallmark Certified Gold
 
@@ -154,12 +157,12 @@ If you need environment variables, add them in Netlify Dashboard under:
 ### Before Deploying
 
 1. **Update Contact Information:**
-   - Phone number: Currently set to `+91 98765 43210` — update with your real number
-   - Email: Currently set to `contact@pauvnabarana.com` — update with your real email
+   - Phone number: Set to `+91 99866 88313`
+   - Email: Set to `kumar84prasanna@yahoo.com`
    - Address: Verify the address is correct
 
 2. **Update WhatsApp Links:**
-   - All WhatsApp links use `https://wa.me/919876543210` — update with your WhatsApp number
+   - All WhatsApp links use `https://wa.me/919986688313`
 
 3. **Test All Links:**
    - Verify all navigation links work
@@ -245,13 +248,13 @@ Edit `src/data/products.ts` to:
 ## 📞 Support
 
 For issues or questions:
-- Email: contact@pauvnabarana.com
-- Phone: +91 98765 43210
+- Email: kumar84prasanna@yahoo.com
+- Phone: +91 99866 88313
 
 ## 📜 License
 
-© 2025 Pauvu Abarana Maligai. All rights reserved.
-47, North Masi Street, Madurai — 625001, Tamil Nadu, India.
+© 2025 Pauvn Abarana Maligai. All rights reserved.
+No. 50, South Avani Moola Street, Madurai, Tamil Nadu - 625001, India.
 
 ---
 

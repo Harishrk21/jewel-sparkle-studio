@@ -11,7 +11,7 @@ export const Route = createFileRoute("/privacy-policy")({
 });
 
 const sections = [
-  { title: "1. INTRODUCTION", content: "Pauvu Abarana Maligai (\"we\", \"our\", \"us\") is a gold jewellery business located at 47, North Masi Street, Madurai — 625001, Tamil Nadu, India. We operate this website and communicate with customers via WhatsApp Business (powered by WhatsApp Cloud API). This Privacy Policy explains how we collect, use, store, and protect your personal information." },
+  { title: "1. INTRODUCTION", content: "Pauvn Abarana Maligai (\"we\", \"our\", \"us\") is a gold jewellery business located at No. 50, South Avani Moola Street, Madurai, Tamil Nadu - 625001, India. We operate this website and communicate with customers via WhatsApp Business (powered by WhatsApp Cloud API). This Privacy Policy explains how we collect, use, store, and protect your personal information." },
   { title: "2. INFORMATION WE COLLECT", content: "We collect: Full name, phone number, email address; Delivery address and PIN code; Order details and purchase history; WhatsApp number (for order updates and offers); Device type, browser, and IP address (for website analytics); Payment method type (we do NOT store card numbers)." },
   { title: "3. HOW WE USE YOUR INFORMATION", content: "Your data is used to: Process and deliver your orders; Send order confirmations and delivery updates via WhatsApp; Respond to your enquiries and complaints; Send festival offers and new arrival alerts (opt-out available); Improve our website and product catalogue." },
   { title: "4. WHATSAPP CLOUD API COMMUNICATION", content: "We use WhatsApp Cloud API (Meta Platforms) to communicate with customers. By providing your WhatsApp number, you consent to receive: Order confirmation messages; Delivery status updates; Festival collection announcements; Customer support responses. You can opt out at any time by sending \"STOP\" to our WhatsApp number. We do not send unsolicited promotional messages." },
@@ -22,7 +22,7 @@ const sections = [
   { title: "9. DATA SECURITY", content: "We use HTTPS encryption, secure servers, and restricted staff access to protect your data. Payment transactions use PCI-compliant gateways." },
   { title: "10. CHILDREN'S PRIVACY", content: "We do not knowingly collect data from individuals under 18 years of age. Purchases by minors must be made by a parent or guardian." },
   { title: "11. CHANGES TO THIS POLICY", content: "We may update this policy. Changes will be posted on this page with an updated \"Last Updated\" date. Continued use of our site implies acceptance." },
-  { title: "12. CONTACT US", content: "For privacy concerns: Email: contact@pauvnabarana.com; Phone: +91 98765 43210; Address: 47, North Masi Street, Madurai — 625001, Tamil Nadu, India." },
+  { title: "12. CONTACT US", content: "For privacy concerns: Email: kumar84prasanna@yahoo.com; Phone: +91 99866 88313; Address: No. 50, South Avani Moola Street, Madurai, Tamil Nadu - 625001, India." },
 ];
 
 function PrivacyPolicyPage() {

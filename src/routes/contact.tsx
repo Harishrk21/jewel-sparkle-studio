@@ -9,9 +9,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Pauvn Abarana Maligai" },
-      { name: "description", content: "Visit us at 47, North Masi Street, Madurai. Call +91 98765 43210 for 916 Hallmark Gold Jewellery enquiries." },
+      { name: "description", content: "Visit us at No. 50, South Avani Moola Street, Madurai. Call +91 99866 88313 for 916 Hallmark Gold Jewellery enquiries." },
       { property: "og:title", content: "Contact Us — Pauvn Abarana Maligai" },
-      { property: "og:description", content: "47, North Masi Street, Madurai. Pure 916 Hallmark Gold since 1987." },
+      { property: "og:description", content: "No. 50, South Avani Moola Street, Madurai. Pure 916 Hallmark Gold since 1987." },
     ],
   }),
 });
@@ -49,7 +49,7 @@ function ContactPage() {
               {[
                 { key: "name", label: "Full Name", placeholder: "Your name", type: "text" },
                 { key: "email", label: "Email or WhatsApp", placeholder: "Email or WhatsApp number", type: "text" },
-                { key: "phone", label: "Phone", placeholder: "+91 98765 43210", type: "tel" },
+                { key: "phone", label: "Phone", placeholder: "+91 99866 88313", type: "tel" },
               ].map(f => (
                 <div key={f.key}>
                   <label className="text-ivory-muted text-xs font-body mb-1 block">{f.label}</label>
@@ -105,9 +105,9 @@ function ContactPage() {
               className="space-y-8 mt-4"
             >
               {[
-                { icon: MapPin, title: "Address", lines: ["47, North Masi Street,", "Near Meenakshi Amman Temple East Gate,", "Madurai — 625001, Tamil Nadu, India"] },
-                { icon: Mail, title: "Email Us", lines: ["contact@pauvnabarana.com"] },
-                { icon: Phone, title: "Phone & WhatsApp", lines: ["+91 98765 43210"] },
+                { icon: MapPin, title: "Address", lines: ["No. 50, South Avani Moola Street,", "Madurai, Tamil Nadu - 625001, India"] },
+                { icon: Mail, title: "Email Us", lines: ["kumar84prasanna@yahoo.com"] },
+                { icon: Phone, title: "Phone & WhatsApp", lines: ["+91 99866 88313"] },
                 { icon: Clock, title: "Business Hours", lines: ["Mon — Sat: 9:30 AM — 8:30 PM", "Sunday: 10:00 AM — 6:00 PM", "Public Holidays: Open (Festival days — extended hours)"] },
               ].map((info, i) => (
                 <div key={i} className="flex gap-4">
@@ -124,7 +124,7 @@ function ContactPage() {
               ))}
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919986688313"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold rounded-lg text-sm inline-flex items-center gap-2"

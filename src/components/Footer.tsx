@@ -43,17 +43,17 @@ export default function Footer() {
           <div>
             <h4 className="text-ivory text-sm uppercase tracking-widest mb-4 font-body font-medium">Visit Us</h4>
             <div className="flex flex-col gap-2 text-ivory-muted text-sm">
-              <p>47, North Masi Street</p>
-              <p>Madurai — 625001, Tamil Nadu</p>
-              <p>+91 98765 43210</p>
-              <p>contact@pauvnabarana.com</p>
+              <p>No. 50, South Avani Moola Street</p>
+              <p>Madurai, Tamil Nadu - 625001, India</p>
+              <p>+91 99866 88313</p>
+              <p>kumar84prasanna@yahoo.com</p>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-ivory-muted text-xs">© {new Date().getFullYear()} Pauvu Abarana Maligai. 47, North Masi Street, Madurai — 625001, Tamil Nadu.</p>
+          <p className="text-ivory-muted text-xs">© {new Date().getFullYear()} Pauvn Abarana Maligai. No. 50, South Avani Moola Street, Madurai, Tamil Nadu - 625001, India.</p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="text-ivory-muted text-xs hover:text-gold transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-ivory-muted text-xs hover:text-gold transition-colors">Terms of Service</Link>

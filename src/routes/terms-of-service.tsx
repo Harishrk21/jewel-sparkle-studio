@@ -20,12 +20,12 @@ const sections = [
   { title: "7. RETURNS & REFUND POLICY", content: "Returns accepted within 7 days of delivery. Product must be unused, unworn, and in original packaging. Customised, engraved, or altered items are non-returnable. Refunds processed within 7 business days of return receipt. Refund is credited to original payment method." },
   { title: "8. EXCHANGE POLICY", content: "Size exchange available within 15 days (rings and bangles). Exchange value based on weight and prevailing gold rate on day of exchange. Old gold exchange accepted at market rate — no deductions for purity if BIS hallmark is present." },
   { title: "9. CANCELLATION POLICY", content: "Orders can be cancelled before dispatch. Once dispatched, cancellation is not possible — initiate a return instead. Custom orders cannot be cancelled after production begins." },
-  { title: "10. INTELLECTUAL PROPERTY", content: "All designs, photographs, content, and brand assets on this website are the exclusive property of Pauvu Abarana Maligai. Reproduction without written permission is prohibited." },
+  { title: "10. INTELLECTUAL PROPERTY", content: "All designs, photographs, content, and brand assets on this website are the exclusive property of Pauvn Abarana Maligai. Reproduction without written permission is prohibited." },
   { title: "11. PROHIBITED USE", content: "You agree not to: Use our website for fraudulent transactions; Copy or replicate our jewellery designs; Misrepresent yourself or your intent when placing orders." },
   { title: "12. LIMITATION OF LIABILITY", content: "We are not liable for indirect losses, delays due to courier failures, or loss of value due to gold market fluctuations after purchase." },
   { title: "13. GOVERNING LAW", content: "These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Madurai, Tamil Nadu." },
-  { title: "14. WHATSAPP COMMUNICATION CONSENT", content: "By sharing your WhatsApp number with us, you consent to receive transactional and promotional messages via WhatsApp Business (Cloud API). You may opt out at any time by messaging \"STOP\" to +91 98765 43210." },
-  { title: "15. CONTACT US", content: "For any questions regarding these terms: Email: contact@pauvnabarana.com; Phone: +91 98765 43210; Address: 47, North Masi Street, Madurai — 625001, Tamil Nadu, India." },
+  { title: "14. WHATSAPP COMMUNICATION CONSENT", content: "By sharing your WhatsApp number with us, you consent to receive transactional and promotional messages via WhatsApp Business (Cloud API). You may opt out at any time by messaging \"STOP\" to +91 99866 88313." },
+  { title: "15. CONTACT US", content: "For any questions regarding these terms: Email: kumar84prasanna@yahoo.com; Phone: +91 99866 88313; Address: No. 50, South Avani Moola Street, Madurai, Tamil Nadu - 625001, India." },
 ];
 
 function TermsPage() {
