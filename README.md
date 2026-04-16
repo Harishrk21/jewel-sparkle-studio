@@ -92,6 +92,12 @@ wrangler deploy
 3. Set up proper routing and redirects
 4. Handle environment variables and edge compatibility
 
+**Note:** You will also need to specify Node 22 in your `netlify.toml` file:
+```toml
+[build.environment]
+  NODE_VERSION = "22"
+```
+
 **This is complex and not recommended for this project.**
 
 **Recommended: Deploy to Cloudflare Workers** - it's already configured and will work out of the box with `wrangler deploy`.
